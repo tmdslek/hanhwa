@@ -17,120 +17,77 @@ a img {border:none;}
         header
 ==================== */
 
-#wrap header {width: 100%; height: 100px; line-height: 100px; position: fixed;
-top: 0; left: 0; z-index: 999; background: rgba(0, 0, 0, 0.2);
-}
+#wrap header {width: 100%; height: 100px; line-height: 100px; position: fixed;top:0; left: 0; z-index: 999; background: rgba(0,0,0,0.2);}
 #wrap header .innerHeader {width: 1400px; height: 100%; margin: 0 auto;}
 #wrap header .innerHeader .logo {float: left;}
-#wrap header .innerHeader .logo img {margin-top: 25px;}
+#wrap header .innerHeader .logo img { margin-top: 25px;}
 
 /* center menu */
+#wrap header .gnb {float: left; margin-left: 100px;}
+#wrap header .gnb ul li{float: left; margin-right:80px;}
+#wrap header .gnb ul li a{display: block;font-size: 16px; color:#fff; text-align: center; }
+#wrap header .gnb ul li a:hover,
+#wrap header .gnb ul li a:focus{color:#ff8342;}
 
-#wrap header .innerHeader .gnb {float: left; margin-left: 100px;}
-#wrap header .innerHeader .gnb ul li {float: left; margin-right: 80px;}
-#wrap header .innerHeader .gnb ul li a {display: block; font-size: 16px; color: #fff; text-align: center;}
-#wrap header .innerHeader .gnb ul li a:hover,
-#wrap header .innerHeader .gnb ul li a:focus {color: #ff8342;}
 /* right menu */
-#wrap header .innerHeader .tnb {float: right; margin-right: -24px;}
+#wrap header .tnb {float: right; margin-right: -24px;}
+#wrap header .tnb ul li {float: left; margin-right: 25px;}
+#wrap header .tnb ul li a{display: block;font-size: 16px; color:#fff; text-align: center; }
+#wrap header .tnb ul li a:hover,
+#wrap header .tnb ul li a:focus{color:#ff8342;}
+#wrap header .tnb ul li:nth-child(1) a i,
+#wrap header .tnb ul li:nth-child(2) a i {font-size: 20px; margin-right: 5px;}
+#wrap header .tnb ul li:last-child a{display: block; width: 130px; border-radius: 30px; margin-top: 35px; border: 1px solid #fff; line-height: 2;}
+#wrap header .tnb ul li:last-child a i {margin-left: 5px;}
+#wrap header .tnb ul li:last-child a:hover, 
+#wrap header .tnb ul li:last-child a:hover {background: #fff; color:#ff8342; transition: .3s;}
 
-#wrap header .innerHeader .tnb ul li {float: left; margin-right: 25px;}
-
-#wrap header .innerHeader .tnb ul li a {display: block; font-size: 16px; color: #fff; text-align: center;}
-#wrap header .innerHeader .tnb ul li a:hover,
-#wrap header .innerHeader .tnb ul li a:focus {color: #ff8342;}
-
-#wrap header .innerHeader .tnb ul li:nth-child(1) a i,
-#wrap header .innerHeader .tnb ul li:nth-child(2) a i {font-size: 20px; margin-right: 5px;}
-
-#wrap header .innerHeader .tnb ul li:last-child a {display: block; width: 130px; border-radius: 30px;
-margin-top: 35px; border: 1px solid #fff; line-height: 2;} 
-
-#wrap header .innerHeader .tnb ul li:last-child a i {margin-left: 5px;}
-#wrap header .innerHeader .tnb ul li:last-child a:hover,
-#wrap header .innerHeader .tnb ul li:last-child a:focus {background: #fff; color: #ff8342; transition: 0.3s;}
 /* =================
         section - main
 ==================== */
-section.main {width: 100%; height: 1000px;
-background: url(../images/vis_1.jpg)no-repeat center/cover;
-background-attachment: fixed; position: relative;
-min-width: 1400px;}
-
-section.main .mainTitle {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
-    color: #fff;
-    text-align: center;
-    letter-spacing: -1px;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-section.main .mainTitle h2 {font-size: 47px;
-margin-bottom: 20px; font-weight: normal;}
-section.main .mainTitle p {font-size: 25px;
-margin-top: 50px; margin-bottom: 30px;}
+#wrap section.main {width: 100%; height: 1000px;background: url("../images/vis_1.jpg")no-repeat center/cover;background-attachment: fixed; /* 스크롤 올려도 배경 고정*/position: relative;min-width:1400px;}
+#wrap section.main .mainTitle { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color:#fff; text-align: center;letter-spacing: -1px;   text-shadow: 0 0 5px rgba(0,0,0,0.5);}
+#wrap section.main .mainTitle h2 {font-size: 47px; margin-bottom: 20px; font-weight: normal;}
+#wrap section.main .mainTitle p {font-size: 25px;margin-top: 50px; margin-bottom: 30px;}
 
 /* btn - view */
 
-section.main .mainTitle a.view {
-    display: block; width: 180px; padding: 8px 0;
-    font-size: 16px;
-    margin: 0 auto;
-    border: 2px solid #fff;
-    position: relative;
-    overflow: hidden;
-    border-radius: 40px;
-}
+#wrap section.main .mainTitle a.view { display: block; width: 180px; padding: 8px 0;  font-size: 16px;  margin: 0 auto;  border:2px solid #fff;  position: relative;  overflow: hidden;  border-radius: 40px;}
+#wrap section.main .mainTitle a.view:after { content:""; width: 0%; height: 100%;  position: absolute; top:0; left: 0;    background: rgba(255,255,255,0.4);  transition: .3s;}
+#wrap section.main .mainTitle a.view:hover:after {width: 100%;}
+#wrap section.main .mainTitle a.view:focus {background: rgba(255,255,255,0.7);}
+#wrap section.main .mainTitle a.view i {margin-left: 5px;}
 
-section.main .mainTitle a.view:after {
-    content: ""; width: 0%; height: 100%;
-    position: absolute; top: 0; left: 0;
-    background: rgba(255, 255, 255, 0.4);
-    transition: 0.3s;
-}
-
-section.main .mainTitle a.view:hover:after {width: 100%;}
-
-section.main .mainTitle a.view:focus {background: rgba(255, 255, 255, 0.7);}
-
-section.main .mainTitle a.view i {margin-left: 5px;}
 
 /* =================
         section - title
 ==================== */
 
-.title {font-family: 'Exo 2', sans-serif; color: #000; text-align: center;}
+.title {font-family: 'Exo 2', sans-serif; color:#000; text-align: center;}
 .title h2 {font-size: 45px; margin-bottom: 10px; font-weight: normal;}
-.title span {color: #ff8342;}
-.title p {font-size: 18px; color: #555;}
+.title span {color:#ff8342;}
+.title p {font-size: 18px; color:#555;}
 
 /* =================
         section - about
 ==================== */
 
-section .about {width: 100%;
-background: #fff; padding: 80px 0;
-min-width: 1400px;
-}
-section.about ul {width: 1400px; margin: 50px auto; overflow: hidden;}
-section.about ul li {float: left; width: 33.3333%;}
-section.about ul li a {display: block;}
-section.about ul li a p.img {width: 100%; height: 369px; overflow: hidden;}
-section.about ul li a p.img img {width: 100%; height: auto; transition: 0.8s;}
-
-section.about ul li a:hover p.img img,
-section.about ul li a:focus p.img img {transform: scale(1.2);}
-
-section.about ul li a .text {padding: 30px; box-sizing: border-box;}
-section.about ul li a .text h3 {font-size: 20px; margin-bottom: 10px;}
-section.about ul li a .text p {font-size: 16px; margin-bottom: 10px;}
-
+#wrap section.about {width: 100%; background: #fff; padding: 80px 0; min-width: 1400px;} 
+#wrap section.about ul {width: 1400px;margin: 50px auto; overflow:hidden;}
+#wrap section.about ul li {float: left; width: 33.3333%;}
+#wrap section.about ul li a{display: block;}
+#wrap section.about ul li a p.img{width: 100%; height: 369px; overflow: hidden;}
+#wrap section.about ul li a p.img img{width: 100%; height: auto; transition: .8s;}
+#wrap section.about ul li a:hover p.img img,
+#wrap section.about ul li a:focus p.img img {transform: scale(1.2);}
+#wrap section.about ul li a .text {padding: 30px; box-sizing: border-box;}
+#wrap section.about ul li a .text h3 {font-size: 20px; margin-bottom: 10px;}
+#wrap section.about ul li a .text p {font-size: 16px; margin-bottom: 10px;} 
 /* btn - more */
-section.about ul li .text p.more {font-weight: bold; padding-left: 40px; position: relative;}
-section.about ul li .text p.more:hover {color: #999;}
-section.about ul li .text p.more:before {content: '\f178'; font-family: FontAwesome; text-align: center;
-    background: #ff8342; width: 30px; height: 30px; line-height: 30px;
-    border-radius: 50%; position: absolute; left: 0; padding-left: 0.4px;}
+#wrap section.about ul li a .text p.more {font-weight: bold; padding-left: 40px; position: relative;}
+#wrap section.about ul li a .text p.more:hover {color:#999;}
+#wrap section.about ul li a .text p.more:before {content:'\f178'; font-family: FontAwesome; background: #ff8342; width: 30px; height: 30px; line-height: 30px; border-radius: 50%; position: absolute; left: 0; padding-left: 0.4px; }
+
 
 /* =================
         section - innovation
