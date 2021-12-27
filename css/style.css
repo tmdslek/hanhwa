@@ -16,6 +16,7 @@ a img {border:none;}
 /* =================
         header
 ==================== */
+#wrap {position: relative;}
 
 #wrap header {width: 100%; height: 100px; line-height: 100px; position: fixed;top:0; left: 0; z-index: 999; background: rgba(0,0,0,0.2);}
 #wrap header .innerHeader {width: 1400px; height: 100%; margin: 0 auto;}
@@ -254,3 +255,80 @@ footer .footer-inner .list ul li a:hover {color: #999;}
 footer .footer-inner .list ul li:last-child a {color: #ff8342;}
 footer .footer-inner .list ul li:last-child a:hover {color: #999;}
 
+/* 팝업 */
+#popup {
+    width: 500px;
+    height: 400px;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%,0);
+    background: url("../images/vis_4.jpg")no-repeat center/cover;
+    border: 1px solid rgb(255, 211, 175);
+}
+#popup .close {
+    width: 40px;
+    background: rgb(70, 81, 236);
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+#popup .close:after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ff8342;
+    line-height: 30px;
+    border-radius: 10px;
+}
+#popup .close:hover:after {
+    width: 100%;
+    content: "X";
+}
+
+#popup .text p {
+    padding: 50px 0 0 75px;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 5px #333;
+    font-size: 1.1em;
+}
+
+#popup .text a {
+    position: absolute;
+    left: 75px;
+    bottom: -20px;
+    display: block;
+    background: #ff8342;
+    font-size: 1.1em;
+    text-shadow: 2px 2px 5px #333;
+    color: #fff;
+    padding: 7px;
+    border-radius: 10px;
+    width: 110px;
+    text-align: center;
+    position: relative;
+}
+#popup .text a:after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.4);
+    transition: .2s;
+    border-radius: 10px;
+}
+#popup .text a:hover:after {
+    width: 100%;
+}
